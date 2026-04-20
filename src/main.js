@@ -1,5 +1,5 @@
 import "./assets/styles/import.scss";
-import { html, render } from "https://cdn.jsdelivr.net/npm/lit-html@3.1.2/+esm";
+import { html, render } from "lit-html";
 import { router } from "./router.js";
 import { logDataMode } from "./dataLoader.js";
 import { renderHeader } from "./components/header.js";
