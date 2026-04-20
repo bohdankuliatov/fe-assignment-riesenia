@@ -8,3 +8,15 @@
         margin-bottom: 10rem;
     }
 }
+
+
+.l-container {
+    width: 100%;
+    max-width: 144rem; 
+    margin: 0 auto;
+    padding: 0 2.4rem;
+
+    &.is-shorter {
+        max-width: 120rem; 
+    }
+}

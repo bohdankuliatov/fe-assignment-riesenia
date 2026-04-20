@@ -25,10 +25,9 @@ export const validateEmail = async (email) => {
         return data;
     } catch (error) {
         console.error("💥 Error:", error);
-
         return {
             success: false,
-            message: "Network error: Unable to reach validation server",
+            message: "Network error",
             email,
         };
     }

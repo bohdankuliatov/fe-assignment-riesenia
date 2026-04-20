@@ -59,7 +59,6 @@ export const loadData = async () => {
     if (CONFIG.DEV_MODE && isCacheValid()) {
         const cachedData = getCachedData();
         if (cachedData) {
-            console.log("[Data Loader] Using cached data (DEV mode)");
             return cachedData;
         }
     }
@@ -106,12 +105,7 @@ export const clearCache = () => {
  * Log data source info to console
  */
 export const logDataMode = () => {
-    console.log(`[Data Loader] API: ${CONFIG.API_BASE_URL}`);
     if (CONFIG.DEV_MODE) {
-        console.log(
-            `[Data Loader] DEV mode: ON (cache duration: ${CONFIG.DEV_CACHE_DURATION / 1000 / 60} minutes)`
-        );
-        console.log(`[Data Loader] To clear cache, run: clearCache()`);
         // Make clearCache available in console
         window.clearCache = clearCache;
     } else {

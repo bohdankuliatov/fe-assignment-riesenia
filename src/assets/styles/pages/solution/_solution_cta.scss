@@ -10,10 +10,19 @@
     &__image {
         position: absolute;
         inset: 0;
-        background-color: var(--c-bg);
+        z-index: 1;
+        background-image: url("../../../images/cta-image.jpg");
         background-position: center;
         background-size: cover;
-        border-radius: 0.8rem;
+        background-repeat: no-repeat;
+    }
+
+    &__overlay {
+        z-index: 2;
+    }
+
+    &__content {
+        z-index: 3;
     }
 
     &__overlay {
@@ -62,7 +71,7 @@
             padding: 1.6rem 2rem;
             color: #fff;
             cursor: pointer;
-            background: #dd1969;
+            background: $r-maincta-pink;
             border: none;
             border-radius: 0.4rem;
             transition: background 0.2s ease;
